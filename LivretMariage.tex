@@ -1,0 +1,336 @@
+% Afficher des recommendations concernant la syntaxe.
+\RequirePackage[orthodox,l2tabu]{nag}
+\RequirePackage{luatex85}
+% Paramètres du document.
+\documentclass[%
+a5paper%                       Taille de page.
+,11pt%                         Taille de police.
+,DIV=15%                       Plus grand => des marges plus petites.
+,titlepage=on%                 Faut-il une page de titre ?
+,headings=optiontoheadandtoc%  Effet des paramètres optionnels de section.
+,headings=small%
+,parskip=false%
+,openany%
+]{scrbook}
+\renewcommand*\partheademptypage{\thispagestyle{empty}}
+\newcounter{facteur}\setcounter{facteur}{17}%%%%%%%%%%%%%% Paramètre pour la taille globale des partitions. par défaut~: 17
+%\usepackage{geometry}
+\usepackage{gredoc,mudoc,lyluatex}
+\usepackage{pdfpages,transparent,array,ltablex}
+
+%%%%%%%%%%%%%%%%%%%%%%% Paramètres variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Taille des partitions grégoriennes.                                                      %%
+\grechangedim{overhepisemalowshift}{.7mm}{scalable}
+\grechangedim{hepisemamiddleshift}{1.4mm}{scalable}
+\grechangedim{overhepisemahighshift}{2.1mm}{scalable}
+\grechangedim{vepisemahighshift}{2.1mm}{scalable}
+%\grechangestafflinethickness{50} %%% epaisseur des lignes
+\grechangestaffsize{\value{facteur}}%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Par souci de clarté, la définition des commandes est reportée dans un document annexe.
+
+\addtolength{\voffset}{2mm}\addtolength{\headsep}{-2mm}
+\setlength{\extrarowheight}{2mm}
+\addto\captionsfrench{%
+  \renewcommand{\indexname}{Index des chants}%
+}
+
+\pdfcompresslevel=9
+
+\newcommand{\lieu}[1]{\hfill\linebreak[3]\hspace*{\stretch{1}}\nolinebreak\mbox{\emph{(#1)}}}
+
+\newcommand{\commandement}[1]{\noindent\textbf{#1}}
+
+\newcommand{\schola}[1]{}\newcommand{\foule}[1]{#1}
+\providecommand{\dest}{foule}%
+
+\newcommand{\bgimage}[1]{%
+\raisebox{-.45\paperheight}[0pt][0pt]{%
+  \transparent{0.3}%
+  \includegraphics[width=.7\paperwidth,height=.7\paperheight,keepaspectratio=true]{img/#1}%
+  }%
+}
+
+\def\arraystretch{1.2}
+
+\newcommand{\reponsegras}[2]{
+\versio{\textbf{#1}}{{#2}}
+}
+
+\title{Jubilé de Notre-Dame de Fontpeyrine}
+\date{}
+
+\let\oldaddchap\addchap
+\def\addchap#1{\oldaddchap{#1}\markright{Pèlerinage du Christ-Roi}}
+
+\def\blindsection#1{\markright{#1}\addcontentsline{toc}{section}{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\maketitle
+{\pagestyle{empty}
+\foule{\includepdf{img/Couverture}}
+\schola{\includepdf{Couverture-schola}}
+\clearpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Le sacrement de mariage}
+\subsection*{Veni Creator}
+\rubrica{La cérémonie commence par l'invocation du Saint-Esprit.}
+\rubrica{On se met à genoux pour la première strophe.}
+\input{gabc/Hymne/VeniCreatorComplet.tex}
+
+\subsection*{Homélie}
+\rubrica{On s'assied pour écouter le sermon.}
+
+\subsection*{L'échange des consentements}
+
+\rubrica{Le prêtre s'adresse au fiancé :}
+
+  \textsc{Monsieur ..., voulez-vous prendre pour légitime épouse ..., ici présente, selon le rite de notre mère la Sainte Eglise?}
+  
+\rubrica{Le fiancé répond : }  \textsc{Oui, je le veux.}
+
+\rubrica{Puis, s'adressant à la fiancée :}
+
+  \textsc{Mademoiselle ..., voulez-vous prendre pour légitime époux ...., ici présent, selon le rite de notre mère la Sainte Eglise?}
+  
+\rubrica{La fiancée répond : }  \textsc{Oui, je le veux.}
+
+\rubrica{Le prêtre invite alors les époux à se donner la main droite. Puis il confirme l'engagement dont il vient d'être témoin en disant :}
+
+\versio{Ego conjungo vos in matrimonium, in nomine Patri, et Filii~\crux\ et Spiritui Sancti. Amen.}{Je vous déclare unis par le mariage au nom du Père et du Fils~\crux\ et du Saint Esprit. Ainsi soit-il.}
+
+\subsection*{Bénédiction des anneaux}
+\rubrica{Le prêtre bénit les anneaux :}
+\versio{%
+\vb\ \crux Adiutórium nostrum in nómine Dómini.}{%
+\vb\ \crux Notre secours est dans le nom du Seigneur.}
+\reponsegras{%
+\rb\ Qui fecit cælum et terram.}{%
+\rb\ Qui a fait le ciel et la terre.}
+\versio{%
+\vb\ Dómine, exáudi oratiónem meam.}{%
+\vb\ Seigneur, exaucez ma prière.}
+\reponsegras{%
+\rb\ Et clamor meus ad te véniat.}{%
+\rb\ Et que mon cri s'élève jusqu'à vous.}
+\versio{%
+\vb\ Dóminus vobíscum.}{%
+\vb\ Le Seigneur soit avec vous.}
+\reponsegras{%
+\rb\ Et cum spíritu tuo.}{%
+\rb\ Et avec votre esprit.}
+\versio{%
+Orémus.}{%
+Prions.}
+\versio{ Bene~\crux\ dic Domine annulum hunc quem nos in tuo nomine bene~\crux\ dicimus, ut qu\ae eum gestaverit, fidelitatem integram suo sponso tenens, in pace et voluntate tua permaneat, atque in mutua caritate semper vivat.}{Béni~\crux\ ssez, Seigneur, ces anneaux que nous béni~\crux\ ssons en votre nom, afin que ceux qui les porteront, les conservent dans une fidélité entière, demeurent dans la paix et dans votre volonté, et qu'ils vivent toujours dans une mutuelle affection. Par le Christ Notre-Seigneur.}
+\reponsegras{\rb\ Amen.}{\rb\ Ainsi soit-il.}
+\rubrica{L'époux passe au doigt de son épouse et à son doigt l'anneau qui ne les quittera plus.
+Le prêtre bénit ce geste et appelle les grâces divines sur l'union irrévocable qui vient de se conclure.}
+
+\subsection{Prière pour les époux}
+\vspace*{0.5cm}
+\versio{\vb\ Confírma hoc, Deus,quod operátus es in nobis.}{
+\vb\ Confirmez, Seigneur, ce que vous avez accompli en nous.}
+
+\reponsegras{\rb\ A templo sancto tuo, quod est in Jerúsalem.}{\rb\ De votre saint temple, en Jérusalem.}
+\versio{Kýrie, éleison.}{Seigneur, ayez pitié de nous.}
+\reponsegras{Christe, éleison. Kýrie, éleison.}{Christ, ayez pitié de nous. Seigneur, ayez pitié de nous.}
+
+\versio{Pater noster}{Notre Père}
+\rubrica{en silence jusqu'à}
+\versio{\vb\ Et ne nos indúcas in tentaiónem.}
+{\vb\ Et ne nous laissez pas succomber à la tentation.}
+
+\reponsegras{\rb\ Sed líbera nos a malo.}
+{\rb\ Mais délivrez-nous du mal.}
+
+\versio{\vb\ Salvos fac servos tuos.}{
+\vb\ Seigneur, sauvez vos serviteurs.}
+
+\reponsegras{\rb\ Deus meus, sperántes in te.}
+{\rb\ Qui espèrent en vous, mon Dieu.}
+
+\versio{\vb\ Mitte eis, Dómine, auxílium de sancto.}{\vb\ Envoyez-leur votre aide, Seigneur, de votre sanctuaire.}
+
+\reponsegras{\rb\ Et de Sion tuére eos.}
+{\rb\ Et de Sion, soutenez-les.}
+
+\versio{\vb\ Esto eis, Dómine, turris fortitúdinis.}{\vb\ Soyez pour eux, Seigneur, comme une tour fortifiée.}
+
+\reponsegras{\rb\ A fácie inimíci.}
+{\rb\ Dressée contre l'ennemi.}
+
+\versio{%
+\vb\ Dómine, exáudi oratiónem meam.}{%
+\vb\ Seigneur, exaucez ma prière.}
+\reponsegras{%
+\rb\ Et clamor meus ad te véniat.}{%
+\rb\ Et que mon cri s'élève jusqu'à vous.}
+\versio{%
+\vb\ Dóminus vobíscum.}{%
+\vb\ Le Seigneur soit avec vous.}
+\reponsegras{%
+\rb\ Et cum spíritu tuo.}{%
+\rb\ Et avec votre esprit.}
+\versio{%
+Orémus.}{%
+Prions.}
+\versio{Réspice, quaésumus, Dómine, super hos fámulos tuos: et institútis tuis, quibus propagatiónem humáni géneris ordinásti, benígnus assíste; ut qu te auctóre jungúntur,te auxiliánte servéntur. Per Christum Dóminum nostrum. R.Amen.}
+{Jetez les yeux, Seigneur, sur ces époux vos serviteurs et protégez cette institution que vous avez établie pour la propagation du genre humain, afin qu'unis par vous ils soient également soutenus et gardés par votre secours. Par le Christ Notre-Seigneur.}
+\reponsegras{%
+\rb\ Amen.}{%
+\rb\ Ainsi soit-il.}
+
+\part[Messe de la Visitation]{Messe de mariage\\
+\bigskip
+\includegraphics[width=\textwidth]{img/VisitationGiotto.jpg}}
+
+%\rubrica{ Le 2 juillet 1769, fête de la Visitation, un orage, tel qu'on n'en avait pas vu depuis longtemps, dévasta les campagnes de Saint-Cyprien, du Bugue, et de Terrasson. La paroisse de Tursac et le sanctuaire de Fontpeyrine furent seuls épargnés.
+%C'est pourquoi, les représentants de la ville de Tursac et sa pieuse population firent vœu d'aller au sanctuaire tous les ans en procession, au jour anniversaire du bienfait, pour remercier Notre-Dame de Fontpeyrine.}}
+\subsection*{Introït}
+\rubrica{Pendant que le l'officiant se prépare à monter à l'autel avec les \emph{prières au bas de l'autel}, nous chantons l'Introït}
+\versio{Deus Israël coniungat vos : et ipse sit vobiscum, qui misertus est duobus unicis : et nunc, Domine, fac eos plenius benedicere te.}
+{Que le Dieu d'Israël vous unisse et qu'il reste avec vous, lui qui a eu pitié de deux enfants uniques ! Et maintenant, Seigneur, faites qu'ils reconnaissent de plus en plus vos bontés.}
+\versio{\vb\ Beati omnes qui timent Dominum : qui ambulant in viis eius. \vb\ Glória Patri.}{Heureux tous ceux qui craignent le Seigneur, et qui marchent dans ses voies \vb\ Gloire au Père.}
+\rubrica{On chante ensuite le \emph{Kyrie} et le \emph{Gloria}}
+
+\subsection*{Collecte}
+\versio{%
+\vb\ Dóminus vobíscum.}{%
+\vb\ Le Seigneur soit avec vous.}
+
+\reponsegras{%
+\rb\ Et cum spíritu tuo.}{%
+\rb\ Et avec votre esprit.}
+
+\versio{Orémus.\\
+Exáudi nos, omnípotens et miséricors Deus~: ut, quod nostro ministrátur offício, tua benedictióne pótius impleátur. Per Dóminum}
+{Prions\\
+Écoutez-nous, Dieu tout-puissant et miséricordieux~: que votre bénédiction donne son plein achèvement à ce que nous venons d'accomplir en vertu de notre charge. Par Notre Seigneur.}
+\reponsegras{%
+\rb\ Amen.}{%
+\rb\ Ainsi soit-il.}
+
+\subsection*{Lecture de l'Épître de Saint Paul aux Éphésiens.}
+\rubrica{Eph. 5, 22-33.}
+Frères, que les femmes soient soumises à leur mari comme au Seigneur~; car le mari est le chef de la femme comme le Christ est le Chef de l'Église, qui est son Corps et dont il est le Sauveur. De même donc que l'Église est soumise au Christ, que les femmes le soient aussi à leur mari en toutes choses.
+Vous, maris, aimez vos femmes tout comme le Christ a aimé l'Église et s'est livré pour elle, afin de la sanctifier en la purifiant par le baptême et la parole de vie~; il s'est ainsi préparé une Église resplendissante, sans tache, ni ride, ni rien de tel, mais sainte et irréprochable. Ainsi, les maris doivent aimer leur femme comme leur propre corps. Qui aime sa femme s'aime lui-même. Personne n'a jamais haï sa propre chair, mais il la nourrit et la soigne tout comme le Christ fait pour l'Église, puisque nous sommes les membres de son corps, formés de sa chair et de ses os.
+C'est pourquoi l'homme quittera son père et sa mère pour s'attacher à sa femme, et les deux ne feront qu'une seule chair. Quel grand mystère~! Je veux dire par rapport au Christ et à l'Église. Ainsi donc, que chacun de vous aime sa femme comme soi-même, et que la femme ait pour son mari un affectueux respect.
+\textbf{\rb\ Deo grátias.}
+
+\subsection*{Suite du saint Évangile selon Saint Matthieu.}
+\rubrica{Matt. 19, 3-6.}
+En ce temps-là, des pharisiens s'approchèrent de Jésus, et pour l'embarrasser lui dirent~: « Est-il permis à un homme de répudier sa femme pour n'importe quel motif~? » « N'avez-vous donc pas lu, répondit Jésus, que le Créateur, à l'origine, fit l'homme et la femme~? et qu'il a dit~: \emph{C'est pourquoi l'homme quittera son père et sa mère pour s'attacher à sa femme, et les deux ne seront qu'une seule chair}. Désormais, ils ne seront plus deux, mais ils seront un seul corps. Et par suite, ce que Dieu a uni, l'homme ne peut le séparer.»
+\reponsegras{%
+\rb\ Laus tibi Christe.}{%
+\rb\ Christ, louange à vous.}
+
+\subsection*{Offertoire}
+\rubrica{À l'Offertoire l'Église offre le Corps et le Sang du Christ, représentés par le pain et le vin. Notre Seigneur a communiqué à son Église le pouvoir d'offrir le même sacrifice qu'il offrit sur la Croix. L'Église s'y unit comme victime. Nous sommes donc une seule victime avec le Christ, unissant nos propres offrandes et nos sacrifices à celui du Christ et de l'Église. Notre participation à cette offrande est exprimée par le chant de l'offertoire.}
+Recevez, Père saint, Dieu éternel et tout-puissant, cette offrande sans tache, que moi, votre indigne serviteur, je vous présente, à vous, mon Dieu vivant et vrai, pour mes péchés, offenses et négligences sans nombre, pour tous ceux qui m'entourent, ainsi que pour tous les fidèles vivants et morts~: qu'elle serve à mon salut et au leur pour la vie éternelle. Ainsi soit-il.
+
+Dieu, ✠ qui, d'une manière admirable, avez créé la nature humaine dans sa noblesse, et l'avez restaurée d'une manière plus admirable encore, accordez-nous, selon le mystère de cette eau et de ce vin, de prendre part à la divinité de celui qui a daigné partager notre humanité, Jésus-Christ votre Fils, Notre Seigneur, qui, étant Dieu, vit et règne avec vous en l'unité du Saint-Esprit, dans tous les siècles des siècles. \mbox{Ainsi soit-il}.\looseness=1
+
+\subsection*{Consécration}
+\rubrica{Le prêtre récite alors l'histoire de l'institution de l'Eucharistie en accomplissant les mêmes gestes que le Christ.}
+
+\versio{%
+Qui prídie quam paterétur, accépit panem in sanctas ac venerábiles manus suas, et elevátis óculis in cælum ad te Deum Patrem suum omnipoténtem, tibi grátias agens, bene ✠ díxit, fregit, dedítque discípulis suis, dicens~: Accípite, et manducáte ex hoc omnes.}{%
+Celui-ci, la veille de sa Passion, prit du pain dans ses mains saintes et adorables, et, les yeux levés au ciel vers vous, Dieu, son Père tout-puissant, vous rendant grâces, il ✠ bénit ce pain, le rompit et le donna à ses disciples en disant~: Prenez et mangez-en tous.}
+
+
+\rubrica{Le prêtre prononce alors les paroles mêmes de Notre-Seigneur. Par ces paroles il opère la conversion du pain au saint Corps du Christ.}
+
+\versio{%
+\scalebox{.91}[1]{\textsc{\addfontfeatures{Renderer=Basic}Hoc est enim Corpus meum.}}\par%
+}{%
+\textsc{\addfontfeatures{Renderer=Basic}Car ceci est mon Corps.}\par%
+}
+
+%\vspace{1\baselineskip plus 2\baselineskip}
+
+\rubrica{Ces paroles étant prononcées, le prêtre fait la génuflexion pour adorer le saint Corps, l'élève pour le présenter à l'adoration des fidèles, puis reprend le récit de l'institution de l'eucharistie~:}
+
+\versio{%
+Símili modo postquam cenátum est, accípiens et hunc præclárum Cálicem in sanctas ac venerábiles manus suas~: item tibi grátias agens, bene ✠ díxit, dedítque discípulis suis, dicens~: Accípite, et bíbite ex eo omnes.}{%
+De même, après le repas, il prit aussi ce précieux calice dans ses mains saintes et adorables, vous rendit grâces encore, le ✠ bénit et le donna à ses disciples en disant~: Prenez et buvez-en tous.}
+
+\rubrica{Prononçant alors les paroles mêmes de Notre-Seigneur, le prêtre opère la conversion du vin au précieux Sang du Christ.}
+%
+\nopagebreak\smallskip%
+%
+\versio{%
+\textsc{\addfontfeatures{Renderer=Basic}Hic est enim Calix Sánguinis mei, novi et ætérni Testaménti~: mystérium fídei~: qui pro vobis et pro multis effundétur in remissiónem peccatórum.}%
+}{%
+\textsc{\addfontfeatures{Renderer=Basic}Car ceci est le Calice de mon Sang, le Sang de l'Alliance nouvelle et éternelle, le mystère de la foi, qui sera versé pour vous et pour un grand nombre en rémission des péchés.}%
+}
+
+\smallskip
+
+\versio{%
+Hæc quotiescúmque fecéritis, in mei memóriam faciétis.}{%
+Toutes les fois que vous ferez cela, vous le ferez en mémoire de moi.}%
+
+%\vspace{1\baselineskip plus 2\baselineskip}
+
+\rubrica{Ces paroles étant prononcées, le prêtre fait la génuflexion pour adorer le précieux Sang. Il l'élève pour le présenter à l'adoration, et fait de nouveau la génuflexion.}
+
+\subsection*{Communion}
+Seigneur Jésus-Christ, qui avez dit à vos Apôtres~: C'est la paix que je vous laisse en héritage, c'est ma paix je vous donne, ne regardez pas mes péchés, mais la foi de votre Église~; daignez, selon votre volonté, lui donner la paix et la rassembler dans l'unité, vous qui, étant Dieu, vivez et régnez dans tous les siècles des siècles. Ainsi soit-il.
+
+\rubrica{Le baiser de paix, manifestant l'union dans la paix du Christ, est hiérarchiquement transmis de l'autel jusqu'au dernier degré du clergé. \emph{Ne pense pas que ce baiser soit comme ceux qui se donnent sur la place entre amis ordinaires. Il unit les âmes entre elles~; il est réconciliation, et pour cette raison il est saint.} (S.~Cyrille de Jérusalem)}
+Seigneur Jésus-Christ, Fils du Dieu vivant, qui, accomplissant la volonté du Père dans une œuvre commune avec le Saint-Esprit, avez par votre mort donné la vie au monde, délivrez-moi par votre Corps et votre Sang infiniment saints de tous mes péchés et de tout mal. Faites que je reste toujours attaché à vos commandements, et ne permettez pas que je sois jamais séparé de vous, qui, étant Dieu, vivez et régnez avec Dieu le Père et le Saint-Esprit dans les siècles des siècles. Ainsi soit-il.
+Seigneur Jésus-Christ, si j'ose recevoir votre Corps malgré mon indignité, que cela n'entraîne pour moi ni jugement ni condamnation, mais, par votre miséricorde, me serve de sauvegarde et de remède pour l'âme et pour le corps, vous qui, étant Dieu, vivez et régnez avec Dieu le Père en l'unité du Saint-Esprit, dans tous les siècles des siècles. Ainsi soit-il.
+
+\rubrica{Après avoir communié, le prêtre se retourne vers les fidèles en leur présentant le saint Corps du Christ.}
+
+\versio{%
+Ecce Agnus Dei, ecce qui tollis peccáta mundi.}{%
+Voici l'Agneau de Dieu, voici celui qui enlève les péchés du monde.}
+
+\rubrica{Nous répondons par les paroles du bienheureux centurion. Cette fois ce n'est plus la guérison d'un serviteur que nous demandons, mais celle de notre âme.}
+%
+\versio{%
+Dómine, non sum dignus, ut intres sub tectum meum~: sed tantum dic verbo, et sanábitur ánima mea. \emph{ter}}{%
+Seigneur, je ne suis pas digne que vous entriez sous mon toit~; mais dites seulement une parole, et mon âme sera guérie. \emph{ter}}
+
+\rubrica{Aux premiers siècles le diacre invitait ceux qui ne pouvaient pas communier à se retirer. Aujourd'hui l'Église est plus indulgente mais les conditions pour communier sont les mêmes~: \textbf{être baptisé et catholique~; ne pas avoir de péché mortel sur la conscience, ce qui suppose notamment l'observation des lois de l'Église au sujet du mariage~; avoir observé le jeûne eucharistique.} La discipline actuelle est d'une heure de jeûne avant la communion. Nous conseillons cependant de s'en tenir à la discipline d'avant le Concile Vatican II~: trois heures pour la nourriture solide, une heure pour le liquide non alcoolisé.\\
+La sainte communion est reçue à genoux et directement dans la bouche.}
+
+\needspace{3\baselineskip}
+\rubrica{En donnant la sainte Eucharistie, le prêtre dit~:}
+
+\versio{%
+Corpus Dómini nostri Iesu Christi custódiat ánimam tuam in vitam ætérnam. Amen.}{%
+Que le Corps de Notre Seigneur Jésus-Christ garde votre âme pour la vie éternelle. Ainsi soit-il.}
+
+\rubrica{%
+On ne répond rien.}
+
+\rubrica{%
+Jésus-Christ est le Bon Pasteur qui donne sa vie pour ses brebis. \emph{Je suis venu pour qu'ils aient la vie et qu'ils l'aient en abondance}. Il nous communique cette vie dans la sainte Eucharistie.%
+}
+
+\subsection*{Chant de communion}
+
+Voilà comment sera béni tout homme qui craint le Seigneur. Puisses-tu voir les enfants de tes enfants ! Que la paix soit sur Israël !
+\subsection*{Postcommunion}
+\versio{%
+\vb\ Dóminus vobíscum.}{%
+\vb\ Le Seigneur soit avec vous.}
+
+\reponsegras{%
+\rb\ Et cum spíritu tuo.}{%
+\rb\ Et avec votre esprit.}
+\versio{Qu\'æsumus, omnípotens Deus~: institúta providéntiæ tuæ pio favóre comitáre~: ut, quos legítima societáte connéctis, longæva pace custódias. Per Dóminum nostrum Iesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, per ómnia s\'æcula sæculórum.}
+{Nous vous en prions, Dieu tout-puissant, accompagnez de votre paternelle bienveillance ce qu'a établi votre providence~: gardez dans la paix, jusqu'à un grand âge, ceux dont vous nouez l'union sacrée. Par Notre Seigneur Jésus-Christ votre Fils, qui étant Dieu vit et règne avec vous en l'unité du Saint-Esprit, dans tous les siècles des siècles.}
+
+\reponsegras{%
+\rb\ Amen.}{%
+\rb\ Ainsi soit-il.}
+
+
+\end{document}
