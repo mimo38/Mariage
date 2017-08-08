@@ -1,11 +1,11 @@
-# Fontpeyrine
+# Mariage
 
 Ce document est un livret liturgique.
 
 
 Il a été conçu à partir du projet [Lourdes](https://github.com/jperon/Lourdes)
 
-**[On peut télécharger le pdf directement ici](https://github.com/mimo38/PDF/raw/master/Fontpeyrine.pdf)**
+**[On peut télécharger le pdf directement ici](https://github.com/mimo38/PDF/raw/master/LivretMariage.pdf)**
 
 Saisi en LaTeX, il est conçu de façon à séparer autant que possible la
 définition des commandes du corps du document, de façon à rendre facile la
