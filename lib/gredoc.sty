@@ -221,8 +221,11 @@
 %\let\grestar\*
 %\let\greheightstar\*
 % Croix
-\catcode`\✠=\active \def ✠{\grecross}
+\catcode`\✠=\active \def ✠{\rubrum\grecross}
 \def\crux{✠}
+%\catcode`\✠=\active \def ✠{\raisebox{-.1ex}[0pt][0pt]{%
+%	\rubrum\includegraphics[height=1.6ex]{Crux}}}
+%\def\crux{✠}
 
 
 %%% Pour les textes bilingues.
