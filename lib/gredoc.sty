@@ -9,13 +9,13 @@
 %%%%%%%%%%%%%%%%% Vous pourriez vouloir modifier ces réglages. %%%%%%%%%%%%%%%%%
 %%% Taille des partitions grégoriennes.
 %\newcounter{facteur}\setcounter{facteur}{10}
-%%% Élasticité des espaces : mettez une valeur inférieure à 10000. Plus les
+%%% Élasticité des espaces : mettez une valeur inférieure à 10000. Plus les
 %%% valeurs sont élevées, plus LaTeX aura de facilité à éviter les
 %%% "débordements", mais moins la mise en page sera rigoureuse.
 %%% Avant de modifier ces paramètres, assurez-vous qu'il n'y a pas moyen de
 %%% faire autrement (gestion des césures, etc.).
-%%% Paramètres recommandés :
-%%% en A5 (police 11pt, DIV auto), tolerance à 1000 et pretolerance à 300 ;
+%%% Paramètres recommandés :
+%%% en A5 (police 11pt, DIV auto), tolerance à 1000 et pretolerance à 300 ;
 %%% en A6 (police 9pt, DIV=11), tolerance à 5000 et pretolerance à 1700.
 \tolerance=1000 \pretolerance=300
 %%% Prévention des veuves et orphelines. Vous pouvez augmenter ces paramètres,
@@ -46,11 +46,11 @@
 \def\ieres{\raisebox{.5ex}{{\footnotesize \hspace{.1ex}res}}}
 \def\iemes{\raisebox{.5ex}{{\footnotesize \hspace{.1ex}es}}}
 
-%%% Une question qui revient souvent : comment personnaliser les marges ?
-%%% Réponse courte : laissez faire LaTeX, il sait ce qu'il fait !
-%%% Bonne réponse : augmentez ou diminuez le paramètre DIV au tout début du
+%%% Une question qui revient souvent : comment personnaliser les marges ?
+%%% Réponse courte : laissez faire LaTeX, il sait ce qu'il fait !
+%%% Bonne réponse : augmentez ou diminuez le paramètre DIV au tout début du
 %%%     document maître.
-%%% Mauvaise réponse : si vraiment vous y tenez, décommentez les lignes qui
+%%% Mauvaise réponse : si vraiment vous y tenez, décommentez les lignes qui
 %%%     suivent, et adaptez-les à vos exigences.
 \usepackage[%
  		includehead%
@@ -182,9 +182,9 @@
 }}
 % \let\rubrique\rubrica
 %%%Caractères spéciaux.
-% Pas besoin d'espace insécable : LaTeX gère lui-même les espaces.
-\catcode`\ =\active \def  {~}
-% Idem pour la césure (invisible, c'est normal !). Cette bidouille vous
+% Pas besoin d'espace insécable : LaTeX gère lui-même les espaces.
+\catcode`\ =\active \def  {~}
+% Idem pour la césure (invisible, c'est normal !). Cette bidouille vous
 % épargnera des sueurs si vous copiez du texte à partir d'un traitement
 % de texte.
 \catcode`\­=\active \def­{}
@@ -197,7 +197,7 @@
 
 %%% Symboles.
 % Verset et répons. Si vous ne savez pas saisir directement ℣. ou ℟., utilisez
-% respectivement \vb. ou \rb. ; si vous ne savez pas saisir †, utilisez \+ ;
+% respectivement \vb. ou \rb. ; si vous ne savez pas saisir †, utilisez \+ ;
 % pour les astérisques, utilisez \*
 \catcode`\℣=\active \def ℣#1{%
 	{\rubrum \Vbar}%
@@ -248,12 +248,12 @@
 % Oraisons.
 \newcommand{\oratio}[3][2]{%
 \versio{%
-℣. Dóminus vobíscum.}{%
-℣. Le Seigneur soit avec vous.}
+℣. Dóminus vobíscum.}{%
+℣. Le Seigneur soit avec vous.}
 
 \versio{%
-\textbf{℟. Et cum spíritu tuo.}}{%
-\textbf{℟. Et avec votre esprit.}}
+\textbf{℟. Et cum spíritu tuo.}}{%
+\textbf{℟. Et avec votre esprit.}}
 	\versio[#1]{%
 		Orémus.\par\nopagebreak
 		#2 \hspace{0ex plus .5\linewidth} \linebreak[0] \mbox{\textbf{℟. Amen.}}
@@ -266,7 +266,7 @@
 	\pagebreak[3]
 }
 
-% Litanies : environnement et versets.
+% Litanies : environnement et versets.
 % \rinvocatio est à utiliser quand on change de réponse.
 \newenvironment{litaniae}{%
 	\begin{paracol}{2}
