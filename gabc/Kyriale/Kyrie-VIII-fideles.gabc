@@ -3,11 +3,9 @@
 name:kyrieVIII;
 def-m1:\linebreak[3];
 %%
-(c3) ( ) <i><c>Chorale : </c>Kyrie eléison</i>  ()<i><c>Fidèles : </c></i> () Ky(d)ri(gxf!gh )e(h.ivHGh.kvIH'Ghih.) *(,) e(gxhvFE'Dgf)lé(e')i(e)son.(d.) (::) ()<i>Kyrie eléison</i>
+(c3) ( ) <i><c>Chorale : </c>Kyrie eléison</i> ( )(::)<i><c>Fidèles : </c></i> () Ky(d)ri(gxf!gh )e(h.ivHGh.kvIH'Ghih.) *(,) e(gxhvFE'Dgf)lé(e')i(e)son.(d.) (::) ()<i>Kyrie eléison</i>()(::)
 Chr{i}(f)ste(fvED'Cd./gxd!fg!hv.ivHGh.) (,) e(gxhvFE'Dgf)lé(e')i(e)son.(d.) (::)
-<i>Christe</i> <i><c>On reprend : </c></i>Chr{i}(f)ste...(fvED)
-<i><c>iij.</c></i> 
+<i>Christe</i>()(::) <i><c>On reprend : </c></i> () Chr{i}(f)ste...(fvED) (::)
+<i>Kyrie eléison</i>()
 K{ý}(k')ri(j)e(kvJI'jkh. gxkhiv.fg!hv.) (,) e(gxhvFE'Dgf)lé(e')i(e)son.(d.) (::)
-
-<i><c>ij.</c></i> 
-K{ý}(k')ri(j)e(kvJI'jkh.) *(,) (kjkvJI'jkh. gxkhiv.fg!hv.) **(,) e(gxhvFE'Dgf)lé(e')i(e)son.(d.) (::)
+<i>Kyrie eléison</i>() (::)
