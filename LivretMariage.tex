@@ -45,24 +45,24 @@ a5paper%                       Taille de page.
 \newcommand{\schola}[1]{}\newcommand{\foule}[1]{#1}
 \providecommand{\dest}{foule}%
 
-\newcommand{\bgimage}[1]{%
-\raisebox{-.45\paperheight}[0pt][0pt]{%
-  \transparent{0.3}%
-  \includegraphics[width=.7\paperwidth,height=.7\paperheight,keepaspectratio=true]{img/#1}%
-  }%
+\newcommand{\bgimage}[1]{%image d'arrière plan
+    \raisebox{-.45\paperheight}[0pt][0pt]{%
+      \transparent{0.3}%
+      \includegraphics[width=.7\paperwidth,height=.7\paperheight,keepaspectratio=true]{img/#1}%
+      }%
 }
 
 \def\arraystretch{1.2}
 
 \newcommand{\reponsegras}[2]{
-\versio{\textbf{#1}}{{#2}}
+    \versio{\textbf{#1}}{{#2}}
 }
 
 \title{Jubilé de Notre-Dame de Fontpeyrine}
 \date{}
 
 \let\oldaddchap\addchap
-\def\addchap#1{\oldaddchap{#1}\markright{Pèlerinage du Christ-Roi}}
+\def\addchap#1{\oldaddchap{#1}\markright{Mariage}}
 
 \def\blindsection#1{\markright{#1}\addcontentsline{toc}{section}{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,9 +76,9 @@ a5paper%                       Taille de page.
 \schola{\includepdf{Couverture-schola}}
 \clearpage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part[Le sacrement de mariage]{Le sacrement de mariage\\
+\chapter[Le sacrement de mariage]{Le sacrement de mariage\\
 \bigskip
-\includegraphics[width=\textwidth]{img/MariageGiotto.jpg}}
+\includegraphics[width=7cm]{img/MariageGiotto.jpg}}
 \subsection*{Veni Creator}
 \rubrica{La cérémonie commence par l'invocation du Saint-Esprit.}
 \rubrica{On se met à genoux pour la première strophe.}
