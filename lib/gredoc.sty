@@ -713,3 +713,80 @@
 	\bigskip
 	\input{gabc/Psaume/Gloria-communion}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIN AJOUT %%%%%%%%%%%%%%%%
+\newcommand{\versusgloria}[1]{%
+	\stepcounter{versus}
+	\noindent\arabic{numerus}.\hspace{1ex}#1\par\stepcounter{numerus}%
+}
+
+%Pour appeler un Psaume, un Cantique, le Gloria
+\newkeycommand\psalmus[tonus,primus=1,ultimus=0,numerus=\value{numerus}][1]{%
+	\setcounter{versus}{0}%
+	\setcounter{numerus}{\commandkey{numerus}}%
+	\setcounter{ultimus}{\commandkey{ultimus} + 1}%
+	\input{gabc/Psaume/Ps-#1}%
+}
+\newkeycommand\canticum[tonus=1,primus=1,ultimus=0,numerus=\value{numerus}][1]{%
+	\setcounter{versus}{0}%
+	\setcounter{numerus}{\commandkey{numerus}}%
+	\setcounter{ultimus}{\commandkey{ultimus} + 1}%
+	\input{gabc/Psaume/Ps-#1}%
+}
+
+
+\newkeycommand{\gloria}[tonus]{%
+	\setcounter{versus}{\value{ultimus} - 1}
+	\input{gabc/Psaume/Gloria}
+}
+\newkeycommand{\gloriacommunion}[tonus]{%
+	\setcounter{versus}{\value{ultimus} - 1}
+	\bigskip
+	\input{gabc/Psaume/Gloria-communion}
+}
+
+\newcommand{\couplets}[2]{
+\input{gabc/#1/#2}}
+
+%%%Ajout pour appeler un psaume et sa traduction en 2 col avec numéro
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% AJOUT %%%%%%%%%%%%%%%%
+%Pour saisir un verset de Psaume et sa traduction
+\newcounter{monnumerus}
+\setcounter{monnumerus}{2}
+\newcounter{monversus}
+\newcounter{monultimus}
+
+\newcommand{\versuversio}[2]{%
+\stepcounter{monversus}
+\ifthenelse{%
+	\(\commandkey{monprimus} = \value{monversus}%
+	\OR \commandkey{monprimus} < \value{monversus}\)%
+	\AND \(\value{monultimus} > \value{monversus}%
+	\OR \commandkey{monultimus} = 0\)
+}{\nopagebreak%
+\versio{\noindent\arabic{monnumerus}.\hspace{1ex}#1%\par
+}{\noindent\arabic{monnumerus}.\hspace{1ex}#2%\par
+} \stepcounter{monnumerus}%
+}\nopagebreak %\par
+}
+
+%Pour appeler un Psaume, un Cantique, le Gloria et sa traduction
+\newkeycommand\psalmusversio[tonus,monprimus=1,monultimus=0,monnumerus=\value{monnumerus}][1]{%
+	\setcounter{monversus}{0}%
+	\setcounter{monnumerus}{\commandkey{monnumerus}}%
+	\setcounter{monultimus}{\commandkey{monultimus} + 1}%
+	\input{gabc/Psaume/Ps-#1}%
+}
+
+\newkeycommand{\mongloria}[tonus]{%
+	\setcounter{monversus}{\value{monultimus} - 1}
+	\input{gabc/Psaume/Gloria-t}}
+
+\newcommand{\versusversiogloria}[2]{%
+	\stepcounter{monversus}
+	\versio{	
+\noindent\arabic{monnumerus}.\hspace{1ex}#1\par}{
+\noindent\arabic{monnumerus}.\hspace{1ex}#2\par}
+
+\stepcounter{monnumerus}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIN AJOUT %%%%%%%%%%%%%%%%
