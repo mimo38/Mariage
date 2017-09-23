@@ -714,35 +714,6 @@
 	\input{gabc/Psaume/Gloria-communion}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIN AJOUT %%%%%%%%%%%%%%%%
-\newcommand{\versusgloria}[1]{%
-	\stepcounter{versus}
-	\noindent\arabic{numerus}.\hspace{1ex}#1\par\stepcounter{numerus}%
-}
-
-%Pour appeler un Psaume, un Cantique, le Gloria
-\newkeycommand\psalmus[tonus,primus=1,ultimus=0,numerus=\value{numerus}][1]{%
-	\setcounter{versus}{0}%
-	\setcounter{numerus}{\commandkey{numerus}}%
-	\setcounter{ultimus}{\commandkey{ultimus} + 1}%
-	\input{gabc/Psaume/Ps-#1}%
-}
-\newkeycommand\canticum[tonus=1,primus=1,ultimus=0,numerus=\value{numerus}][1]{%
-	\setcounter{versus}{0}%
-	\setcounter{numerus}{\commandkey{numerus}}%
-	\setcounter{ultimus}{\commandkey{ultimus} + 1}%
-	\input{gabc/Psaume/Ps-#1}%
-}
-
-
-\newkeycommand{\gloria}[tonus]{%
-	\setcounter{versus}{\value{ultimus} - 1}
-	\input{gabc/Psaume/Gloria}
-}
-\newkeycommand{\gloriacommunion}[tonus]{%
-	\setcounter{versus}{\value{ultimus} - 1}
-	\bigskip
-	\input{gabc/Psaume/Gloria-communion}
-}
 
 \newcommand{\couplets}[2]{
 \input{gabc/#1/#2}}
