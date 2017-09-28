@@ -12,6 +12,12 @@ a5paper%                       Taille de page.
 ,parskip=false%
 ,openany%
 ]{scrbook}
+\newcommand{\epoux}{
+N.
+}
+\newcommand{\epouse}{
+N.
+}
 \renewcommand*\partheademptypage{\thispagestyle{empty}}
 \newcounter{facteur}\setcounter{facteur}{17}%%%%%%%%%%%%%% Paramètre pour la taille globale des partitions. par défaut~: 17
 %\usepackage{geometry}
@@ -120,12 +126,12 @@ La cérémonie de l'union des mains, suivie de la remise de l'anneau, est le sig
 \subsection*{L'échange des consentements}
 
 \emph{\rubrum Le prêtre s'adresse au fiancé :}
-\textsc{Monsieur \textbf{Pierre-Henri Morille}, voulez-vous prendre pour légitime épouse Élisabeth Le Provost de Saint-Jean, ici présente, selon le rite de notre mère la Sainte Église?}
+\textsc{Monsieur \textbf{\epoux}, voulez-vous prendre pour légitime épouse \epouse, ici présente, selon le rite de notre mère la Sainte Église?}
   
 \emph{\rubrum Le fiancé répond : }\textsc{Oui, je le veux.}
 
 \emph{\rubrum Puis, s'adressant à la fiancée :}
-  \textsc{Mademoiselle \textbf{Élisabeth Le Provost de Saint-Jean}, voulez-vous prendre pour légitime époux Pierre-Henri Morille, ici présent, selon le rite de notre mère la Sainte Église?}
+  \textsc{Mademoiselle \textbf{\epouse}, voulez-vous prendre pour légitime époux \epoux, ici présent, selon le rite de notre mère la Sainte Église?}
   
 \emph{\rubrum La fiancée répond : }  \textsc{Oui, je le veux.}
 
@@ -239,7 +245,7 @@ Le prêtre bénit ce geste et appelle les grâces divines sur l'union irrévocab
 \cantus{Kyriale}{Kyrie-VIII}{}{5.}
 
 \subsection*{Gloria}
-\cantus{Kyriale}{Gloria-VIII-fideles}{}{5.}
+\cantus{Kyriale}{Gloria-VIII}{}{5.}
 
 %\includely{ly/MesseBleue/Abb-Jean-Robin-1920-2002-Kyrie}
 %Kyrie eléison
@@ -262,12 +268,12 @@ Le prêtre bénit ce geste et appelle les grâces divines sur l'union irrévocab
 Écoutez-nous, Dieu tout-puissant et miséricordieux~: que votre bénédiction donne son plein achèvement à ce que nous venons d'accomplir en vertu de notre charge. Par Notre Seigneur.
 \reponsegras{\rb\ Amen.}{\rb\ Ainsi soit-il.}
 
-\rubrica{Mémoire de N.D. du Rosaire}
-\versio{{\centering Orémus.\par}}
-{{\centering Prions.\par}}
-O Dieu, dont le Fils unique nous a obtenu le prix du salut éternel par sa vie, sa mort et sa résurrection ; faites, nous vous en prions, qu’honorant ces mystères au moyen du très saint Rosaire de la bienheureuse Vierge Marie, nous imitions ce qu’ils contiennent, et obtenions ce qu’ils promettent. Par le même Notre Seigneur.
-\reponsegras{\rb\ Amen.}{\rb\ Ainsi soit-il.}
-\newpage
+%\rubrica{Mémoire de N.D. du Rosaire}
+%\versio{{\centering Orémus.\par}}
+%{{\centering Prions.\par}}
+%O Dieu, dont le Fils unique nous a obtenu le prix du salut éternel par sa vie, sa mort et sa résurrection ; faites, nous vous en prions, qu’honorant ces mystères au moyen du très saint Rosaire de la bienheureuse Vierge Marie, nous imitions ce qu’ils contiennent, et obtenions ce qu’ils promettent. Par le même Notre Seigneur.
+%\reponsegras{\rb\ Amen.}{\rb\ Ainsi soit-il.}
+\pagebreak
 \subsection*{Lecture de l'Épître de Saint Paul aux Éphésiens.}
 \rubrica{Eph. 5, 22-33.}
 Frères, que les femmes soient soumises à leur mari comme au Seigneur~; car le mari est le chef de la femme comme le Christ est le Chef de l'Église, qui est son Corps et dont il est le Sauveur. De même donc que l'Église est soumise au Christ, que les femmes le soient aussi à leur mari en toutes choses.
@@ -342,11 +348,11 @@ Il est vraiment juste et nécessaire, c’est notre devoir et c’est notre salu
 Par lui les Anges louent votre majesté, les Dominations l’adorent, les Puissances la révèrent, les Cieux et les Forces des Cieux avec les bienheureux Séraphins la célèbrent, unis dans une même allégresse. A leurs chants nous vous prions de laisser se joindre aussi nos voix pour proclamer dans une humble louange :
 
 \subsection*{Sanctus}
-\rubrica{Alterné avec la chorale}
-\cantus{Kyriale}{Sanctus-VIII-I}{5.}{}
-Pleni sunt cæli et terra glória tua. Hosánna in excélsis !
-\cantus{Kyriale}{Benedictus-VIII-I}{5.}{}
-Hosánna in excélsis !
+%\rubrica{Alterné avec la chorale}
+\cantus{Kyriale}{Sanctus-VIII}{5.}{}
+%Pleni sunt cæli et terra glória tua. Hosánna in excélsis !
+%\cantus{Kyriale}{Benedictus-VIII-I}{5.}{}
+%Hosánna in excélsis !
 \newpage
 \subsection*{\centering Consécration}
 \imagecentre{5cm}{03preparatioAdMissam.jpg}
@@ -467,18 +473,18 @@ Deus, qui potestáte virtútis tuæ de níhilo cuncta fecísti~: qui dispósitis
 \rubrica{Le mélange d'une parcelle de l'hostie dans le précieux Sang signifie l'unité de tous dans le même sacrifice.}
 
 \subsection*{Agnus Dei}
-\rubrica{Alterné avec la chorale.}
+%\rubrica{Alterné avec la chorale.}
+%\versio{%
+%Agnus Dei, qui tollis peccáta mundi, miserére nobis.%
+%}{%
+%Agneau de Dieu, qui ôtez les péchés du monde, ayez pitié de nous.%
+%}%
+\cantus{Kyriale}{Agnus-VIII}{6.}{}
 \versio{%
-Agnus Dei, qui tollis peccáta mundi, miserére nobis.%
-}{%
-Agneau de Dieu, qui ôtez les péchés du monde, ayez pitié de nous.%
-}%
-\cantus{Kyriale}{Agnus-VIII-2}{6.}{}
-\versio{%
-Agnus Dei, qui tollis peccáta mundi, dona nobis pacem.%
-}{%
-Agneau de Dieu, qui ôtez les péchés du monde, donez-nous la paix.%
-}%
+%Agnus Dei, qui tollis peccáta mundi, dona nobis pacem.%
+%}{%
+%Agneau de Dieu, qui ôtez les péchés du monde, donez-nous la paix.%
+%}%
 
 
 \rubrica{Aux messes solennelles, l'oraison suivante pour la paix est suivie du baiser de paix.}
@@ -560,9 +566,9 @@ Que Dieu tout-puissant vous bénisse, le Père, ✠ le Fils et le Saint-Esprit.}
 \reponsegras{%
 \rb\ Amen.}{%
 \rb\ Ainsi soit-il.}
-
 {\begin{center} \greseparator{1}{20}\end{center}}
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[]{Consécration à la Vierge}
 \rubrica{Les époux vont consacrer leur nouveau foyer à la Vierge, et signer les registres avec le célébrant et les témoins, pendant ce temps, on chante l'hymne suivant en alternance avec la chorale :}
 %\titre{Ave Maris stella}
