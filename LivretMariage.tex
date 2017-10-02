@@ -12,12 +12,8 @@ a5paper%                       Taille de page.
 ,parskip=false%
 ,openany%
 ]{scrbook}
-\newcommand{\epoux}{
-N.
-}
-\newcommand{\epouse}{
-N.
-}
+%\newcommand{\epoux}{N.}
+%\newcommand{\epouse}{N.}
 \renewcommand*\partheademptypage{\thispagestyle{empty}}
 \newcounter{facteur}\setcounter{facteur}{17}%%%%%%%%%%%%%% Paramètre pour la taille globale des partitions. par défaut~: 17
 %\usepackage{geometry}
@@ -126,12 +122,16 @@ La cérémonie de l'union des mains, suivie de la remise de l'anneau, est le sig
 \subsection*{L'échange des consentements}
 
 \emph{\rubrum Le prêtre s'adresse au fiancé :}
-\textsc{Monsieur \textbf{\epoux}, voulez-vous prendre pour légitime épouse \epouse, ici présente, selon le rite de notre mère la Sainte Église?}
+\textsc{Monsieur \textbf{%\epoux
+N. }, voulez-vous prendre pour légitime épouse %\epouse
+N., ici présente, selon le rite de notre mère la Sainte Église?}
   
 \emph{\rubrum Le fiancé répond : }\textsc{Oui, je le veux.}
 
 \emph{\rubrum Puis, s'adressant à la fiancée :}
-  \textsc{Mademoiselle \textbf{\epouse}, voulez-vous prendre pour légitime époux \epoux, ici présent, selon le rite de notre mère la Sainte Église?}
+  \textsc{Mademoiselle \textbf{%\epouse
+  N.}, voulez-vous prendre pour légitime époux %\epoux
+  N., ici présent, selon le rite de notre mère la Sainte Église?}
   
 \emph{\rubrum La fiancée répond : }  \textsc{Oui, je le veux.}
 
