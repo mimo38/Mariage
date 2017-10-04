@@ -3,12 +3,12 @@ Sortie :
 
 This is LuaTeX, Version 0.98.3 (TeX Live 2017/dev) 
  restricted system commands enabled.
-(/opt/musite/static/docs/tmp/Mariage/gabc/Verset/main.tex
+(/opt/musite/static/docs/tmp/Mariage/gabc/Introit/main.tex
 LaTeX2e <2017/01/01> patch level 3
 (using write cache: /var/lib/texmf/luatex-cache/generic)(using read cache: /var
 /lib/texmf/luatex-cache/generic /root/.texlive2016/texmf-var/luatex-cache/gener
 ic)
-luaotfload | main : initialization completed in 0.201 seconds
+luaotfload | main : initialization completed in 0.401 seconds
 Babel <3.9r> and hyphenation patterns for 1 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2016/06/14 v3.21 KOMA-Script document class (article)
@@ -80,7 +80,8 @@ xmf/luatex-cache/generic/fonts/otl/linlibertine-rb.luc)(load luc: /var/lib/texm
 f/luatex-cache/generic/fonts/otl/linlibertine-ri.luc)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-luatex.def)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg)) (./main.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+No file main.aux.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -92,20 +93,19 @@ f/luatex-cache/generic/fonts/otl/linlibertine-ri.luc)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/luatex-loader.sty
 (/usr/share/texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua)))
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
-(./SedLiberaNos-5_0_1.gtex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.ma
-p}] (./main.aux))
- 3585 words of node memory still in use:
-   91 hlist, 14 vlist, 55 rule, 1 local_par, 76 glue, 64 kern, 14 penalty, 22 g
-lyph, 292 attribute, 59 glue_spec, 57 attribute_list, 1 write, 1 user_defined, 
-26 pdf_colorstack nodes
-   avail lists: 2:769,3:83,4:10,5:97,6:71,7:55,8:10,9:47,11:3
-Module gregoriotex Warning: Line heights or variable brace lengths may have cha
-nged. Rerun to fix. on input line 0
-</usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RI.
-otf></usr/share/texmf/fonts/truetype/public/gregoriotex/greciliae.ttf></usr/sha
-re/texmf/fonts/truetype/public/gregoriotex/greextra.ttf></usr/share/texlive/tex
-mf-dist/fonts/opentype/public/libertine/LinLibertine_R.otf>
-Output written on main.pdf (1 page, 11485 bytes).
+Module gregoriotex Warning: warning:no name specified, put `name:...;' at the b
+eginning of the file, can be dangerous with some output formats on input line 8
+4
+Module gregoriotex Warning: *** end of warnings for DeusIsrael.gabc *** on inpu
+t line 84
+(./DeusIsrael-5_0_1.gtex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+] (./main.aux))
+ 1009 words of node memory still in use:
+   13 hlist, 4 vlist, 13 rule, 20 glue, 13 kern, 3 glyph, 66 attribute, 52 glue
+_spec, 21 attribute_list, 1 write, 1 user_defined, 6 pdf_colorstack nodes
+   avail lists: 2:69,3:5,4:7,5:14,6:26,7:35,8:8,9:13,11:3
+
+warning  (pdf backend): draftmode enabled, not changing output pdf
 Transcript written on main.log.
 
 
