@@ -123,9 +123,15 @@ La cérémonie de l'union des mains, suivie de la remise de l'anneau, est le sig
 \begin{Form}
 \emph{\rubrum Le prêtre s'adresse au fiancé :}
 \textsc{Monsieur\newline
-\textbf{\Textfield[name=epoux,defaut=N.]}\newline
+\textbf{\TextField[name=epoux,defaut=N.,format={var f = this.getField('prenom');
+                       f.strokeColor = ['T'];f.fillColor=['T'];
+                       f.textFont ='Verdana'
+                   }]}\newline
  voulez-vous prendre pour légitime épouse\newline
- \textbf{\Textfield[name=epouse,defaut=N.]}\newline
+ \textbf{\TextField[name=epouse,defaut=N.format={var f = this.getField('prenom');
+                       f.strokeColor = ['T'];f.fillColor=['T'];
+                       f.textFont ='Verdana'
+                   }]}\newline
  ici présente, selon le rite de notre mère la Sainte Église?}
   
 \emph{\rubrum Le fiancé répond : }\textsc{Oui, je le veux.}
