@@ -1,0 +1,130 @@
+\documentclass[%
+fontsize=10%
+,a6paper%
+,DIV=15%
+]{scrartcl}
+%scrartcl
+
+
+
+\usepackage{gredoc}
+\usepackage{psaume}
+
+\title{\centrer{Grandes Antiennes de l'Avent}}
+\author{ou Antiennes O}
+\date{du 17 au 23 décembre}
+
+\makeindex
+\definecolor{rubrum}{rgb}{.6,0,0}
+\def\rubrum{\color{black}}%%%%%%%mettre"\def\rubrum{\color{rubrum}}" pour avoir le texte adéquat en rouge
+\def\nigra{\color{black}}
+%    \redlines
+%    \definecolor{gregoriocolor}{rgb}{.6,0,0}
+%
+%\let\red\rubrum
+
+\begin{document}
+
+%    \newfontfamily\lettrines[Scale=1.3]{LettrinesPro800}
+ %   \def\gretextformat#1{{\fontsize{\taillepolice}{\taillepolice}\selectfont #1}}
+  %  \def\greinitialformat#1{{\lettrines #1}}
+    
+
+\newcommand{\ligne}[2]{
+\begin{center}
+\greseparator{#1}{#2}
+\end{center}
+}
+\newcommand{\marubrique}{\rubrica{Magnificat page \pageref{section:magnificat}. Verset et oraisons page \pageref{section:oraisons}}}
+
+\thispagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+
+\titre{17 décembre}
+\vulgo{O Sagesse, sortie de la bouche du Très-Haut, qui enveloppez toutes choses d'un pôle à l'autre et les disposez avec force et douceur, venez nous enseigner le chemin de la prudence.}
+\cantus{Antienne}{OSapientia}{}{2.D.}
+\marubrique
+
+\ligne{2}{10}
+
+\titre{18 décembre}
+\vulgo{O Adonaï, guide du peuple d'Israël, qui êtes apparu à Moïse dans le feu du buisson ardent, et lui avez donné vos commandements sur le mont Sinaï, armez votre bras, et venez nous sauver.}
+\cantus{Antienne}{OAdonai}{}{2.D.}
+\marubrique
+\ligne{2}{10}
+
+\titre{19 décembre}
+\vulgo{O Fils de la race de Jessé, signe dressé devant les peuples, vous devant qui les souverains resteront silencieux, vous que les peuples appelleront au secours, délivrez-nous, venez, ne tardez plus !}
+\cantus{Antienne}{ORadixIesse}{}{2.D.}
+\marubrique
+\ligne{2}{10}
+
+\titre{20 décembre}
+\vulgo{O Clef de la cité de David, sceptre du royaume d'Israël, vous ouvrez, et personne alors ne peut fermer ; vous fermez, et personne ne peut ouvrir ; venez, faites sortir du cachot le prisonnier établi dans les ténèbres et la nuit de la mort.}
+\cantus{Antienne}{OClavisDavid}{}{2.D.}
+\marubrique
+\ligne{2}{10}
+
+\titre{21 décembre}
+\vulgo{O Orient, splendeur de la Lumière éternelle, Soleil de justice, venez, illuminez ceux qui sont assis dans les ténèbres et la nuit de la mort.}
+\cantus{Antienne}{OOriens}{}{2.D.}
+\marubrique
+
+\ligne{2}{10}
+
+\titre{22 décembre}
+\vulgo{O Roi des nations, objet de leur désir, clef de voûte qui unissez les peuples opposés, venez sauver l'homme que vous avez façonné d'argile.}
+\cantus{Antienne}{ORexGentium}{}{2.D.}
+\marubrique
+\ligne{2}{10}
+
+\titre{23 décembre}
+\vulgo{O Emmanuel, notre roi et législateur, que tous les peuples attendent comme leur Sauveur, venez nous sauver, Seigneur notre Dieu !}
+\cantus{Antienne}{OEmmanuel}{}{2.D.}
+\marubrique
+\ligne{2}{10}
+
+\newpage
+\titre{Magnificat}
+\label{section:magnificat}
+\cantus{Psaume}{Intonation-Magnificat-2D}{}{2.D.}
+\canticum[tonus=per,primus=2,ultimus=0,numerus=\value{numerus}]{Magnificat}
+\gloria[tonus=per]
+\rubrica{On reprend alors l'antienne, puis le chantre dit le verset :}
+\medskip
+\label{section:oraisons}
+
+\versio{\V Roráte cæli désuper et nubes pluant justum.}{\V Cieux répandez d'en haut votre rosée, et que les nuées fassent pleuvoir le Juste}
+\versio{\textbf{\R Aperiátur terra et gérminet Salvatórem.}}{\textbf{\R Que la terre s'entrouvre et fasse germer le Sauveur}}
+\medskip
+\versio{\centering{Orémus}}{\centering{Prions}}
+
+\newfontfamily\malettrine[Scale=0.6]{LettrinesPro800}
+\renewcommand{\LettrineFontHook}{\malettrine\color{black}}
+
+\rubrica{avant le 4\ieme dimanche de l'Avent (en dehors des Quatre-Temps)}
+\versio{\lettrine{A}{urem} tuam, quǽsumus,
+Dómine, précibus nostris
+accómmoda: et mentis nostræ
+ténebras, grátia tuæ visitatiónis
+illústra: Qui vivis.}
+{\lettrine{S}{eigneur}, prêtez l’oreille à nos prières : et quand vous nous ferez la grâce de venir parmi nous, apportez votre lumière dans l’obscurité de nos âmes.}
+
+\rubrica{le mercredi des Quatre-Temps :}
+\versio{\lettrine{P}{r{\'æ}sta}, quǽsumus, omnípotens
+Deus: ut re\-dem\-pti\-ónis
+nostræ ventúra solémnitas et
+præséntis nobis vitæ subsídia
+cónferat, et ætérnæ beatitúdinis
+praémia largiátur. Per Dóminum}{\lettrine{F}{aites}, nous vous le demandons, Seigneur : que la solennité approchant de notre rédemption nous apporte avec elle les grâces nécessaires pour la vie présente et nous obtienne la récompense du bonheur éternel.}
+
+\rubrica{le vendredi des Quatre-Temps :}
+\versio{\lettrine{E}{xcita}, quǽsumus, Dómine, poténtiam tuam, et veni : ut hi, qui in tua pietáte confídunt, ab omni cítius adversitáte liberéntur : Qui vivis.}
+{\lettrine{E}{xcitez} votre puissance, Seigneur, et venez, pour que vos fidèles confiants en votre bonté, soient très vite délivrés de tout ce qui leur fait obstacle.}
+
+
+\rubrica{à partir du samedi avant le 4\ieme dimanche de l'Avent}
+\versio{\lettrine{E}{xcita}, quǽsumus, Dómine, poténtiam tuam, et veni : et magna nobis virtúte succúrre ; ut per auxílium grátiæ tuæ, quod nostra peccáta præpédiunt, indulgéntiæ tuæ propitiatiónis accéleret : Qui vivis et regnas.}
+{\lettrine{E}{xcitez}, Seigneur, votre puissance et venez : donnez-nous le secours de votre force infinie, et qu’avec l’aide de votre grâce, votre indulgente bonté nous accorde sans délai ce que retardent nos péchés.}
+\end{document}
