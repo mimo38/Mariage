@@ -1,14 +1,72 @@
-\documentclass[%
-fontsize=10%
-,a6paper%
-,DIV=15%
-]{scrartcl}
-%scrartcl
+\documentclass[%%
+a5paper%                       Taille de page.
+,11pt%                         Taille de police.
+,DIV=15%                       Plus grand => des marges plus petites.
+,titlepage=on%                 Faut-il une page de titre ?
+%,headings=optiontoheadandtoc%  Effet des paramètres optionnels de section.
+%,headings=small%
+,parskip=false%
+,openany%
+]{scrbook}
+\renewcommand*\partheademptypage{\thispagestyle{empty}}
+\newcounter{facteur}\setcounter{facteur}{17}%%%%%%%%%%%%%% Paramètre pour la taille globale des partitions. par défaut~: 17
+%\usepackage{geometry}
+\usepackage{gredoc,mudoc,lyluatex}
+\usepackage{pdfpages,transparent,array,ltablex}
+\usepackage{framed}
 
+%%%%%%%%%%%%%%%%%%%%%%% Paramètres variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Taille des partitions grégoriennes.                                                      %%
+\grechangedim{overhepisemalowshift}{.7mm}{scalable}
+\grechangedim{hepisemamiddleshift}{1.4mm}{scalable}
+\grechangedim{overhepisemahighshift}{2.1mm}{scalable}
+\grechangedim{vepisemahighshift}{2.1mm}{scalable}
+%\grechangestafflinethickness{50} %%% epaisseur des lignes
+\grechangestaffsize{\value{facteur}}%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Par souci de clarté, la définition des commandes est reportée dans un document annexe.
 
+\addtolength{\voffset}{2mm}\addtolength{\headsep}{-2mm}
+\setlength{\extrarowheight}{2mm}
+\addto\captionsfrench{%
+  \renewcommand{\indexname}{Index des chants}%
+}
 
-\usepackage{gredoc}
-\usepackage{psaume}
+\pdfcompresslevel=9
+
+\newcommand{\lieu}[1]{\hfill\linebreak[3]\hspace*{\stretch{1}}\nolinebreak\mbox{\emph{(#1)}}}
+
+\newcommand{\commandement}[1]{\noindent\textbf{#1}}
+
+\newcommand{\schola}[1]{}\newcommand{\foule}[1]{#1}
+\providecommand{\dest}{foule}%
+
+\newcommand{\bgimage}[1]{%image d'arrière plan
+    \raisebox{-.45\paperheight}[0pt][0pt]{%
+      \transparent{0.3}%
+      \includegraphics[width=.7\paperwidth,height=.7\paperheight,keepaspectratio=true]{img/#1}%
+      }%
+}
+
+\def\arraystretch{1.2}
+
+\newcommand{\reponsegras}[2]{
+    \versio{\textbf{#1}}{{#2}}
+}
+\newcommand{\imagecentre}[2]{
+\begin{center} \includegraphics[height=#1]{img/#2} \end{center}}
+
+\title{Jubilé de Notre-Dame de Fontpeyrine}
+\date{}
+
+\let\oldaddchap\addchap
+\def\addchap#1{\oldaddchap{#1}\markright{Mariage}}
+
+\def\blindsection#1{\markright{#1}\addcontentsline{toc}{section}{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
 
 \title{\centrer{Grandes Antiennes de l'Avent}}
 \author{ou Antiennes O}
